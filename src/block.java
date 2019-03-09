@@ -15,11 +15,11 @@ String cur_hash;
 String prev_hash;
 String message;
 
-	 block(String data,String previousHash,int ndx ) {
+	 block(String data,String previousHash,int ndx ,String cur) {
 
 	        message = data;
 	        index=ndx;
-
+            cur_hash=cur;
 	        prev_hash= previousHash ;
 
 	        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
@@ -79,7 +79,7 @@ String message;
 	    	proof=proof+"1";
 	    hash_result= sha256(proof);
 	   if(!hash_result.equals("-1")){
-		   System.out.println("proofed-->"+hash_result);
+		  // System.out.println("proofed-->"+hash_result);
 		   return hash_result;
 		  
 		  
