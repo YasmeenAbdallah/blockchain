@@ -1,3 +1,5 @@
+package blockChain;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -50,3 +52,4 @@ public class UI extends JFrame {
 		contentPane.add(lblNewLabel);
 	}
 }
+
